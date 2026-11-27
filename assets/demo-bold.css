@@ -1,0 +1,136 @@
+/* ============ 見た目の型：かっちり・工業系（body.tm-bold） ============
+ * demo.css に重ねて使う。白・グレー・黒に鮮やかな1色。中抜きの巨大な英字・マス目の地紋・六角形の線・角のある形。
+ * 足場・鳶・土木・解体・鉄骨・設備など、職人の採用や法人向けのサイト向け。
+ */
+.tm-bold {
+  --en: 'Syncopate', 'Zen Kaku Gothic New', sans-serif;
+  --r: 0px;
+  --grid: color-mix(in srgb, var(--line) 60%, transparent);
+  font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  letter-spacing: .04em;
+}
+.tm-bold main { background-color: var(--bg); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 72px 72px; }
+.tm-bold h1, .tm-bold h2, .tm-bold h3 { font-weight: 900; letter-spacing: .06em; }
+.tm-bold .en { font-family: var(--en); font-weight: 700; letter-spacing: .28em; font-size: 11px; color: var(--main); }
+
+/* ボタン・ヘッダー */
+.tm-bold .btn { border-radius: 2px; letter-spacing: .12em; }
+.tm-bold .btn-main { background: var(--main); box-shadow: none; }
+.tm-bold .btn-main:hover { background: var(--ink); }
+.tm-bold .btn-line { border: 1px solid var(--ink); }
+.tm-bold .site-header { background: color-mix(in srgb, var(--bg) 96%, transparent); border-bottom: 1px solid var(--line); }
+.tm-bold .logo small { font-family: var(--en); letter-spacing: .35em; font-size: 9px; color: var(--sub); }
+.tm-bold .site-nav a::after { background: var(--main); }
+.tm-bold .site-nav .nav-cta { background: var(--ink); }
+.tm-bold .header-tel { font-family: var(--en); font-weight: 400; letter-spacing: .06em; font-size: 18px; }
+.tm-bold .header-tel .ic { color: var(--main); }
+
+/* ヒーロー */
+.hero-bold { min-height: min(94svh, 880px); align-items: flex-end; background: var(--dark); }
+.hero-bold .hero-bg::after { background: linear-gradient(180deg, color-mix(in srgb, var(--dark) 30%, transparent) 0%, color-mix(in srgb, var(--dark) 45%, transparent) 50%, color-mix(in srgb, var(--dark) 88%, transparent) 100%); }
+.hero-bold .hero-in { padding-top: 120px; padding-bottom: clamp(150px, 18vw, 230px); position: relative; z-index: 1; }
+.hero-bold .hero-en { font-family: var(--en); letter-spacing: .35em; font-size: 12px; }
+.hero-bold .hero-en::before { content: ''; width: 36px; height: 2px; background: var(--main); }
+.hero-bold h1 { font-size: clamp(26px, 4vw, 50px); line-height: 1.85; text-shadow: none; letter-spacing: .08em; }
+.hero-bold h1 .hl { background: var(--bg); color: var(--ink); padding: .1em .4em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hero-bold .hero-lead { max-width: 560px; font-size: 15px; }
+.hero-bold .hero-badges li { border-radius: 0; background: color-mix(in srgb, var(--dark) 45%, transparent); border-color: color-mix(in srgb, #fff 35%, transparent); }
+.hero-bold .hero-badges .ic { color: var(--main); }
+.hero-vert { position: absolute; z-index: 1; left: 22px; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; margin: 0; font-family: var(--en); font-size: 10px; letter-spacing: .45em; color: #fff; opacity: .7; white-space: nowrap; }
+.hero-vert::after { content: ''; display: inline-block; width: 1px; height: 80px; background: var(--main); margin-top: 18px; }
+.mq-hero { position: absolute; z-index: 1; left: 0; right: 0; bottom: 14px; pointer-events: none; }
+.mq-hero span { font-family: var(--en); font-weight: 700; font-size: clamp(56px, 10.5vw, 168px); line-height: 1; letter-spacing: .02em; color: transparent; -webkit-text-stroke: 1.4px color-mix(in srgb, #fff 80%, transparent); padding: 0 .18em; }
+.mq-hero span:nth-of-type(3n) { color: color-mix(in srgb, #fff 92%, transparent); -webkit-text-stroke: 0; }
+.mq-hero i { font-style: normal; color: var(--main); font-size: clamp(28px, 4vw, 60px); }
+
+/* 下層ページの見出し：中抜きの巨大英字 */
+.tm-bold .page-head { padding: 100px 0 64px; }
+.tm-bold .page-head .en { font-size: clamp(40px, 8vw, 116px); font-weight: 400; letter-spacing: .02em; line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, #fff 85%, transparent); opacity: 1; margin-bottom: 18px; }
+.tm-bold .page-head h1 { display: inline-block; background: var(--bg); color: var(--ink); padding: 2px 18px; font-size: clamp(22px, 3.4vw, 32px); }
+.tm-bold .page-head p { margin-top: 14px; }
+
+/* セクション見出し：左寄せ・中抜きの巨大英字・短い色の線 */
+.tm-bold .sec-head { text-align: left; margin-bottom: 56px; }
+.tm-bold .sec-head .en { font-size: clamp(46px, 9.4vw, 136px); font-weight: 400; letter-spacing: .02em; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px color-mix(in srgb, var(--ink) 55%, transparent); margin: 0 0 18px; }
+.tm-bold .sec-dark .sec-head .en { -webkit-text-stroke-color: color-mix(in srgb, #fff 70%, transparent); }
+.tm-bold .sec-head h2::after { margin: 20px 0 0; width: 46px; height: 3px; background: var(--main); }
+.tm-bold .sec-lead { margin-left: 0; }
+.tm-bold .sec-head + .chips, .tm-bold .sec .wrap > .chips:first-child { justify-content: flex-start; }
+.tm-bold .sec-tint { background: color-mix(in srgb, var(--tint) 88%, transparent); }
+.tm-bold .intro { text-align: left; max-width: 900px; margin-left: 0; }
+.tm-bold .intro-bgtext { left: auto; right: -40px; transform: none; color: transparent; -webkit-text-stroke: 1px var(--line); font-weight: 700; }
+.tm-bold .intro-title[data-fill] { font-size: clamp(26px, 4vw, 44px); }
+/* 六角形の線（ゆっくり回る） */
+.tm-bold .sec-intro::before, .tm-bold .sec-tint::before { content: ''; position: absolute; right: -80px; top: 40px; width: 340px; aspect-ratio: 1; pointer-events: none; opacity: .5; background: var(--main);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 3 91 26.5v47L50 97 9 73.5v-47z' fill='none' stroke='%23000' stroke-width='.5'/%3E%3Cpath d='M50 17 79 33.5v33L50 83 21 66.5v-33z' fill='none' stroke='%23000' stroke-width='.35'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 3 91 26.5v47L50 97 9 73.5v-47z' fill='none' stroke='%23000' stroke-width='.5'/%3E%3Cpath d='M50 17 79 33.5v33L50 83 21 66.5v-33z' fill='none' stroke='%23000' stroke-width='.35'/%3E%3C/svg%3E") center / contain no-repeat;
+  animation: hexspin 60s linear infinite; }
+.tm-bold .sec-tint::before { right: auto; left: -110px; top: auto; bottom: 30px; width: 260px; animation-direction: reverse; }
+@keyframes hexspin { to { transform: rotate(360deg); } }
+
+/* 写真・カード：角のある形、番号は白い箱に中抜き */
+.tm-bold .split-img img, .tm-bold .interview-img img, .tm-bold .card-img img, .tm-bold .staff img { border-radius: 0; box-shadow: none; }
+.tm-bold .split-img::before { inset: 20px -20px -20px 20px; background: none; border: 1px solid var(--main); border-radius: 0; }
+.tm-bold .split.rev .split-img::before { inset: 20px 20px -20px -20px; }
+.tm-bold .img-num { top: auto; bottom: 0; left: 0; background: var(--bg); padding: 12px 20px 0 0; font-weight: 400; font-size: 64px; color: transparent; -webkit-text-stroke: 1.2px var(--main); text-shadow: none; }
+.tm-bold .card { border-radius: 0; box-shadow: none; border: 1px solid var(--line); }
+.tm-bold .card:hover { border-color: var(--main); box-shadow: none; }
+.tm-bold .tag { border-radius: 0; background: var(--ink); letter-spacing: .14em; }
+.tm-bold .chips li { border-radius: 0; background: var(--bg); border: 1px solid var(--line); color: var(--ink); }
+.tm-bold .interview-name { background: var(--ink); color: #fff; left: 0; }
+.tm-bold .interview-name small { color: var(--main); }
+.tm-bold .gallery figure, .tm-bold .service-card, .tm-bold .staff, .tm-bold .worry, .tm-bold .steps li, .tm-bold .faq, .tm-bold .flow-h li, .tm-bold .area-box, .tm-bold .num, .tm-bold .plan { border-radius: 0; }
+.tm-bold .benefit { border-radius: 0; box-shadow: none; border: 1px solid var(--line); border-top: 3px solid var(--main); }
+.tm-bold .benefit-ic { border-radius: 0; background: var(--ink); color: #fff; }
+.tm-bold .reason { border-radius: 0; box-shadow: none; border: 1px solid var(--line); }
+.tm-bold .reason-num, .tm-bold .steps li::before, .tm-bold .flow-num { font-family: var(--en); font-weight: 400; color: transparent; -webkit-text-stroke: 1px var(--main); }
+.tm-bold .reason h3 { border-left-color: var(--main); }
+.tm-bold .num-val b, .tm-bold .year { font-family: var(--en); font-weight: 700; }
+.tm-bold .q { border-radius: 0; background: var(--ink); }
+.tm-bold .a-mark { border-radius: 0; background: var(--main); color: #fff; }
+.tm-bold .faq { box-shadow: none; border: 1px solid var(--line); }
+.tm-bold .table tr:first-child th, .tm-bold .table tr:first-child td { border-top: 2px solid var(--main); }
+.tm-bold .table th { color: var(--ink); }
+
+/* 横に流れる強みのパネル */
+.tm-bold .hs-head .en { font-size: clamp(36px, 6vw, 80px); font-weight: 400; letter-spacing: .02em; line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, #fff 60%, transparent); }
+.tm-bold .hs-panel { border-radius: 0; }
+.tm-bold .hs-panel.on { background: var(--main); border-color: var(--main); }
+.tm-bold .hs-num { font-family: var(--en); color: #fff; opacity: .8; }
+.tm-bold .hs-val b { font-family: var(--en); font-weight: 700; letter-spacing: 0; }
+.tm-bold .hs-count { font-family: var(--en); }
+
+/* 文字の帯 */
+.tm-bold .mq-big span { font-family: var(--en); font-weight: 700; }
+.tm-bold .mq-line { background: var(--main); color: #fff; padding: 14px 0; }
+.tm-bold .mq-line span { letter-spacing: .2em; }
+.tm-bold .mq-line i { color: var(--ink); }
+
+/* 導線 */
+.tm-bold .cta-band { text-align: left; }
+.tm-bold .cta-band .cta-in p { margin-left: 0; }
+.tm-bold .cta-in .en { font-size: clamp(44px, 8vw, 110px); font-weight: 400; letter-spacing: .02em; line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, #fff 75%, transparent); opacity: 1; margin-bottom: 18px; }
+.tm-bold .cta-btns { justify-content: flex-start; }
+.tm-bold .cta-band .btn-main { background: var(--main); color: #fff; }
+.tm-bold .cta-inline { border-radius: 0; background: var(--ink); border-left: 6px solid var(--main); }
+.tm-bold .cta-inline::before { display: none; }
+.tm-bold .cta-inline-text small { font-family: var(--en); color: var(--main); opacity: 1; }
+.tm-bold .float-cta { border-radius: 0; background: var(--main); }
+.tm-bold .float-cta small { font-family: var(--en); }
+.tm-bold .form, .tm-bold .assure { border-radius: 0; }
+.tm-bold .form { box-shadow: none; border: 1px solid var(--line); }
+.tm-bold .form input, .tm-bold .form select, .tm-bold .form textarea { border-radius: 0; }
+.tm-bold .assure { border-left: 4px solid var(--main); }
+.tm-bold .site-footer { background: var(--ink); }
+.tm-bold .sc-main { background: var(--main); }
+
+@media (max-width: 720px) {
+  .tm-bold main { background-size: 48px 48px; }
+  .hero-vert { display: none; }
+  .hero-bold .hero-in { padding-bottom: 120px; }
+  .hero-bold h1 { font-size: min(6.6vw, 28px); line-height: 1.9; }
+  .tm-bold .sec-intro::before, .tm-bold .sec-tint::before { width: 200px; right: -90px; }
+  .tm-bold .img-num { font-size: 46px; }
+}
+.still .tm-bold .sec-intro::before, .still .tm-bold .sec-tint::before { animation: none; }
+@media (prefers-reduced-motion: reduce) { .tm-bold .sec-intro::before, .tm-bold .sec-tint::before { animation: none; } }
